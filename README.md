@@ -1,145 +1,120 @@
-📄 PaperMind — Research Paper Q&A Assistant
+# 📄 PaperMind — Research Paper Q&A (RAG App)
 
-A lightweight RAG (Retrieval-Augmented Generation) application built with Streamlit, LangChain, FAISS, HuggingFace Embeddings, and Groq LLM.
-This tool allows you to upload research papers (PDFs) and ask natural-language questions. The app retrieves the most relevant text chunks and generates highly accurate answers based only on your documents.
+PaperMind is a lightweight **RAG (Retrieval-Augmented Generation)** app built using **FAISS**, **LangChain**, **HuggingFace Embeddings**, and **Groq LLM**.  
+It allows you to load research papers and ask questions — the answers come strictly from your documents.
 
-🚀 Features
+---
 
-📂 Upload or add PDFs to the research_papers/ folder
+## 🚀 Features
 
-🧩 Automatic text splitting using RecursiveCharacterTextSplitter
+- PDF ingestion from `research_papers/`  
+- Text chunking via RecursiveCharacterTextSplitter  
+- Embeddings using Sentence-Transformers  
+- Fast vector search with FAISS  
+- Answer generation using Groq (Gemma 7B)  
+- Shows retrieved document chunks for transparency  
+- Clean and simple Streamlit interface  
 
-🎯 Vector embeddings using HuggingFace sentence-transformers
+---
 
-📘 Fast vector search powered by FAISS
+## 📦 Installation
 
-🤖 Natural-language answers from Groq LLM (Gemma 7B)
-
-🔍 “Document Similarity Search” section to show retrieved chunks
-
-🧠 Clean Streamlit UI for asking questions interactively
-
-📁 Project Structure
-PaperMind/
-│
-├── research_papers/          # Add your PDF files here
-├── app.py                    # Main Streamlit application
-├── requirements.txt          # Project dependencies
-├── .env                      # Contains GROQ_API_KEY
-└── README.md                 # Project documentation
-
-🔧 Installation
-1️⃣ Clone the repository
+### 1. Clone the project
+```bash
 git clone https://github.com/yourusername/PaperMind.git
 cd PaperMind
+```
 
-2️⃣ Create & activate a virtual environment
+### 2. Create a virtual environment
+```bash
 python -m venv venv
+```
 
+Activate:
 
-Windows:
-
+**Windows**
+```bash
 venv\Scripts\activate
+```
 
-
-Mac/Linux:
-
+**Mac/Linux**
+```bash
 source venv/bin/activate
+```
 
-3️⃣ Install dependencies
+### 3. Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
-🔐 Environment Variables
+---
 
-Create a .env file in the project root:
+## 🔑 Environment Variables
 
-GROQ_API_KEY=your_groq_api_key_here
+Create a `.env` file in the root:
 
+```
+GROQ_API_KEY=your_groq_api_key
+```
 
-You can get your Groq API key from:
-🔗 https://console.groq.com
+Get your API key here: https://console.groq.com
 
-📘 How to Use
-1️⃣ Add PDFs
+---
 
-Place your research papers inside:
+## 📘 How to Use
 
-research_papers/
+1. Add your PDF files to the `research_papers/` folder.  
+2. Run the app:
 
-2️⃣ Start the Streamlit app
+```bash
 streamlit run app.py
+```
 
-3️⃣ Create Vector Database
+3. Click **Document Embedding** to build the FAISS vector database.  
+4. Ask any question related to your uploaded papers.  
+5. Expand **Document similarity Search** to see which chunks were used to answer your question.
 
-Click:
+---
 
-➡️ Document Embedding
+## 🧱 Tech Stack
 
-This processes your PDFs and builds a FAISS vector store.
+- **Python**
+- **Streamlit**
+- **LangChain**
+- **LangChain-Classic (for chains)**
+- **FAISS**
+- **HuggingFace Sentence Transformers**
+- **Groq LLM (Gemma)**  
+- **PyPDF**
 
-4️⃣ Ask Your Question
+---
 
-Type a question such as:
+## 📁 Project Structure
 
-“What is a Transformer model?”
+```
+PaperMind/
+│
+├── research_papers/       # Place PDFs here
+├── app.py                 # Main application
+├── requirements.txt
+├── .env
+└── README.md
+```
 
-Click:
+---
 
-➡️ ANSWER
+## 💡 Future Improvements
+- File upload support  
+- Multi-model LLM comparison  
+- Summary generation  
+- Chat mode with history  
 
-5️⃣ View Retrieved Document Chunks
+---
 
-Expand:
+## 📝 License
+MIT License — free to use and modify.
 
-➡️ Document similarity Search
+---
 
-This shows the exact text chunks used to generate the answer.
-
-🛠️ Tech Stack
-
-Python 3.10+
-
-Streamlit — UI
-
-LangChain — RAG pipeline
-
-FAISS — Vector storage
-
-HuggingFace Sentence Transformers — Embeddings
-
-Groq LLM (Gemma 7B) — Answer generation
-
-PyPDF — PDF ingestion
-
-✨ Why PaperMind?
-
-Lightweight and fast
-
-100% local vector search (FAISS)
-
-No dependency on OpenAI
-
-Uses cutting-edge Groq inference for blazing-fast responses
-
-Clean and simple UI
-
-📌 Future Enhancements
-
-🔧 Support for multi-PDF uploads
-
-🧠 Conversation history (chat mode)
-
-🏷 Document tagging & filtering
-
-📊 PDF summarization
-
-📥 Drag-and-drop file upload
-
-🤝 Contributing
-
-Pull requests are welcome!
-For major changes, please open an issue first to discuss your idea.
-
-📜 License
-
-This project is licensed under the MIT License.
+## 🙌 Credits
+Built by **Vikrant** using LangChain, FAISS, HuggingFace, and Groq.
