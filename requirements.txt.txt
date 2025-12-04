@@ -1,0 +1,22 @@
+streamlit
+python-dotenv
+
+# LangChain ecosystem
+langchain
+langchain-core
+langchain-community
+langchain-text-splitters
+langchain-classic
+
+# FAISS vector store
+faiss-cpu
+
+# Embeddings (HuggingFace local models)
+sentence-transformers
+langchain-huggingface
+
+# PDF loading
+pypdf
+
+# Groq LLM for RAG
+langchain-groq
